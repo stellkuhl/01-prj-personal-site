@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stella — Portfolio</title>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Add your HTML content here -->
+
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <div class="brand">
+          Stella Kuhlman
+          <span>Portfolio</span>
+        </div>
+
+        <nav>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / TITLE -->
+    <section class="hero">
+      <div class="container">
+        <h1>Stella Kuhlman</h1>
+        <p>
+          I'm a web development student.
+          This site will grow as I learn.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-text">
+          Hi! I’m Stella Kuhlman. I’m taking a web development course and using this site
+          to showcase the projects I build. I am a Junior at Southern Methodist University majoring in Business Analytics and Supply Chain Management, and Data Science. In my free time, I enjoy pilates, going on walks, videography/photography, and spending time with friends and family.
+        </p>
+      </div>
+    </section>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+
+        <ul class="skills">
+          <li><i class="fa-brands fa-html5"></i> HTML Basics</li>
+          <li><i class="fa-brands fa-css3-alt"></i> CSS Basics</li>
+          <li><i class="fa-brands fa-python"></i> Python</li>
+          <li><i class="fa-solid fa-database"></i> SQL</li>
+        </ul>
+      </div>
+    </section>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-text">
+          Here are some projects I've worked on:
+        </p>
+        <div class="projects-list">
+          <div class="project-card">
+            <h3>Personal Portfolio Website</h3>
+            <p>A responsive website to showcase my skills and projects using HTML and CSS.</p>
+          </div>
+          <div class="project-card">
+            <h3>Coming Soon</h3>
+            <p>More projects will be added as I continue learning and building!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-text">
+          Email me at <strong>skuhlman@smu.edu</strong>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Stella Kuhlman
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>

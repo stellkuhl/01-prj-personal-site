@@ -1,1 +1,276 @@
-/* Add you CSS here */
+/* ========== Basic Reset ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* ========== Theme Colors ========== */
+:root {
+  --bg: #FFFDF0;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #D11B1F;
+  --max: 980px;
+}
+
+/* ========== General Page Style ========== */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========== Header / Top Bar ========== */
+header {
+  padding: 22px 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.brand {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.brand span {
+  display: block;
+  color: var(--accent);
+  text-transform: none;
+  letter-spacing: normal;
+  margin-top: 4px;
+}
+
+nav a {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent);
+  margin-left: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  padding: 50px 0 40px;
+  text-align: center;
+  border-top: none; /* Remove the thin accent-colored line above the hero section */
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 90px; /* Reduced from 100px */
+  font-weight: 400; /* Keep the title thinner */
+  margin-top: 20px; /* Reduce space above */
+  margin-bottom: 10px; /* Slightly reduce space below */
+  color: var(--accent); /* Keep the accent color */
+}
+
+.hero p {
+  margin-top: 20px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 26px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(209, 27, 31, 0.35);
+  padding-bottom: 2px;
+}
+
+/* ========== Sections ========== */
+section {
+  padding: 40px 0;
+  border-top: none; /* Removed the thin accent-colored line */
+  margin-top: 0; /* Add spacing between sections */
+}
+
+#about {
+  /* Give the About Me section an accent color background */
+  background-color: var(--accent);
+  text-align: left; /* Left align the About Me section */
+}
+
+#about .section-title {
+  /* Make the About Me title black text */
+  color: var(--bg);
+}
+
+#about .section-text {
+  /* Make the About Me text light and left aligned */
+  color: var(--bg);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#contact {
+  /* Give the Contact section a light background color */
+  background-color: var(--bg);
+  border-top: 3px solid var(--accent); /* Add accent color line above */
+}
+
+#contact .section-title {
+  /* Make the Contact title accent red and smaller */
+  color: var(--accent);
+  font-size: 28px;
+}
+
+#contact .section-text {
+  /* Make the Contact text dark */
+  color: var(--accent);
+}
+
+.section-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 45px; /* Make the title larger */
+  font-weight: 300; /* Make the title thinner */
+  margin-bottom: 14px;
+  color: var(--accent); /* Make titles the accent red color */
+}
+
+.section-text {
+  /* About Me section text styling */
+  max-width: 720px;
+  color: var(--accent); /* Make text accent color */
+  font-size: 18px; /* Larger text */
+  font-weight: 300; /* Thin font weight */
+}
+
+#skills {
+  /* Center the Skills section */
+  text-align: center;
+  background-color: var(--bg);
+  border-bottom: 3px solid var(--accent);
+}
+
+#skills .section-title {
+  /* Center the Skills title */
+  text-align: center;
+  font-size: 45px;
+  color: var(--accent);
+}
+
+/* ========== Skills ========== */
+.skills {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  justify-content: center; /* Center the skill items */
+}
+
+.skills li {
+  border: 1px solid var(--accent); /* Use accent color for border */
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: var(--accent); /* Make background transparent */
+  font-size: 16px; /* Make text larger */
+  color: var(--bg); /* Make text accent color */
+}
+
+#projects {
+  /* Projects section styling */
+  background-color: var(--accent);
+  text-align: center;
+  border-top: none;
+}
+
+#projects .section-title {
+  /* Projects title styling */
+  color: var(--bg);
+}
+
+#projects .section-text {
+  /* Projects text styling */
+  color: var(--bg);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========== Projects Cards ========== */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.project-card {
+  border: 2px solid var(--bg);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 280px;
+  text-align: center;
+  background-color: var(--bg);
+}
+
+.project-card h3 {
+  color: var(--accent);
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: var(--accent);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#skills .section-text {
+  /* Center the Skills section text */
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--accent);
+}
+.skills li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skills i {
+  color: var(--bg);
+  font-size: 16px;
+}
+
+/* ========== Footer ========== */
+footer {
+  padding: 40px 0 55px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
